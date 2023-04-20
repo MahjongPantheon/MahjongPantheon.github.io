@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Pantheon 1.2.0 released | Mahjong Pantheon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Pantheon major version have been released. Thanks to our beta testers for useful feedback. Major changes include pao rule support, new tournament seating algorithm, reducing supported databases to Pos">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pantheon 1.2.0 released">
+<meta property="og:url" content="https://riichi.top/2017/11/05/1-2-0/index.html">
+<meta property="og:site_name" content="Mahjong Pantheon">
+<meta property="og:description" content="Pantheon major version have been released. Thanks to our beta testers for useful feedback. Major changes include pao rule support, new tournament seating algorithm, reducing supported databases to Pos">
+<meta property="og:locale">
+<meta property="article:published_time" content="2017-11-05T09:32:44.000Z">
+<meta property="article:modified_time" content="2023-04-20T10:08:00.329Z">
+<meta property="article:author" content="Pantheon dream team">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Mahjong Pantheon" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+
+  
+<link rel="stylesheet" href="/css/styles.css">
+
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-menu-navbar">
+      <ul class="nav navbar-nav">
+        
+          
+          <li><a class=""
+                 href="/">Home</a></li>
+          
+        
+          
+          <li><a class=""
+                 href="/about/">More details</a></li>
+          
+        
+          
+            <li style="color:#fff; padding: 0 15px">Description:
+              
+              <a style="display:inline-block; padding: 10px 0" class=""
+               href="/description-en/">EN</a>
+              
+              <a style="display:inline-block; padding: 10px 0" class=""
+               href="/description-ru/">RU</a>
+              
+            </li>
+          
+        
+          
+            <li style="color:#fff; padding: 0 15px">Local games:
+              
+              <a style="display:inline-block; padding: 10px 0" class=""
+               href="/host-local-en/">EN</a>
+              
+              <a style="display:inline-block; padding: 10px 0" class=""
+               href="/host-local-ru/">RU</a>
+              
+            </li>
+          
+        
+          
+            <li style="color:#fff; padding: 0 15px">Tournaments:
+              
+              <a style="display:inline-block; padding: 10px 0" class=""
+               href="/host-tourn-en/">EN</a>
+              
+              <a style="display:inline-block; padding: 10px 0" class=""
+               href="/host-tourn-ru/">RU</a>
+              
+            </li>
+          
+        
+          
+          <li><a class=""
+                 href="/blog/">News</a></li>
+          
+        
+      </ul>
+
+      <!--
+      <ul class="nav navbar-nav navbar-right">
+        
+          <li><a href="/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
+        
+      </ul>
+      -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <div class="container">
+    <div class="blog-header">
+  <a href="/">
+    <img src="/images/pantheon.png" />
+    <h1 class="blog-title">Mahjong Pantheon</h1>
+    
+    <div class="clear"></div>
+  </a>
+
+</div>
+
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+          <article id="post-1-2-0" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Pantheon 1.2.0 released
+    </h1>
+  
+
+
+    </header>
+
+    <div class="article-meta">
+      <div class="article-datetime">
+  <a href="/2017/11/05/1-2-0/" class="article-date"><time datetime="2017-11-05T09:32:44.000Z" itemprop="datePublished">2017-11-05</time></a>
+</div>
+
+      
+      
+
+    </div>
+  
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Pantheon major version have been released. Thanks to our beta testers for useful feedback. Major changes include pao rule support, new tournament seating algorithm, reducing supported databases to PostgreSQL only, simpler developer environment setup supported by Docker, resurrection of online games support and many more.</p>
+<span id="more"></span>
+
+<ul>
+<li>Tournament control panel markup improvements (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-189">issue</a>)</li>
+<li>Allow oorasu cancellation in tournament (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-182">issue</a>)</li>
+<li>Support pao rule (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-171">issue</a>)</li>
+<li>[Start game screen] Bug fix: it’s possible to start the game without selecting all four players (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-134">issue</a>)</li>
+<li>[Start game screen] Bug fix: it’s possible to start the game without current player (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-162">issue</a>)</li>
+<li>Add round end time to the db (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-184">issue</a>)</li>
+<li>Open hand button is unexpectedly deselected (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-166">issue</a>)</li>
+<li>Update Tyr dependencies (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-177">issue</a>)</li>
+<li>[Start game screen] When player is selected, remove him from the list (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-160">issue</a>)</li>
+<li>[Start game screen] Update players list when start game screen is loaded (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-161">issue</a>)</li>
+<li>Bug: fix timezone on prod (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-180">issue</a>)</li>
+<li>Subtract the base 30k in EMA games (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-83">issue</a>)</li>
+<li>Don’t end the game in the red zone if chombo happened (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-76">issue</a>)</li>
+<li>Allow administrator to hide the rating table (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-123">issue</a>)</li>
+<li>Don’t start games when seating is generated (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-175">issue</a>)</li>
+<li>Reset timer button is not working if games are already started (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-173">issue</a>)</li>
+<li>Add total games count to lastGames API (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-74">issue</a>)</li>
+<li>Show current page and disallow getting beyond first or last page (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-121">issue</a>)</li>
+<li>[pgsql migration] Fix nominations page (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-172">issue</a>)</li>
+<li>Allow dead hand with riichi (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-159">issue</a>)</li>
+<li>[pgsql migration] Migrate prod DB (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-11">issue</a>)</li>
+<li>Disable other games listing for players who is in game now (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-158">issue</a>)</li>
+<li>Add event description to event main page (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-126">issue</a>)</li>
+<li>Critical patch (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-128">issue</a>)</li>
+<li>Add phpcs checks (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-127">issue</a>)</li>
+<li>Add event title to page header (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-120">issue</a>)</li>
+<li>Show best game series on main page of event (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-119">issue</a>)</li>
+<li>Fix pagination in mobile games listing (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-118">issue</a>)</li>
+<li>Add single game page (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-115">issue</a>)</li>
+<li>Sort games by end date (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-116">issue</a>)</li>
+<li>Allow to set cookie life for each event (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-113">issue</a>)</li>
+<li>Change user page link (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-114">issue</a>)</li>
+<li>Disable layout menu links according to event settings (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-112">issue</a>)</li>
+<li>Support multiple events on single Rheda instance (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-106">issue</a>)</li>
+<li>Bug fix: games are not finished if timer policy is set no ‘none’ (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-84">issue</a>)</li>
+<li>Bug fix: “View replay” links are visible for offline event (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-85">issue</a>)</li>
+<li>Repair online games support (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-81">issue</a>)</li>
+<li>Add best game series API support (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-68">issue</a>)</li>
+<li>Add last games sorting support in API (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-67">issue</a>)</li>
+<li>Add game info API (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-66">issue</a>)</li>
+<li>Add flag for penalties (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-64">issue</a>)</li>
+<li>Support viewing games as non-registered user (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-60">issue</a>)</li>
+<li>Simplify development environment setup (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-3">issue</a>)</li>
+<li>Add sorting by average score (<a target="_blank" rel="noopener" href="https://pantheon.myjetbrains.com/youtrack/issue/PNTN-10">issue</a>)</li>
+</ul>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="https://riichi.top/2017/11/05/1-2-0/" data-id="clgoynt4u0001nrd23bb3aw03" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+
+    </footer>
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2017/05/16/1.1.1/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Pantheon 1.1.0 &amp; 1.1.1 released</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2018/11/30/2018.11/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Pantheon 2018.11 update</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+</article>
+
+
+
+
+        </div>
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          
+  
+  <div class="sidebar-module">
+    <h4>Last news</h4>
+    <ul class="sidebar-module-list">
+      
+        <li>
+          <a href="/2023/04/20/New-admin-panel-release/">New admin panel release</a>
+        </li>
+      
+        <li>
+          <a href="/2021/11/20/2021.11/">Pantheon 2021.11 update</a>
+        </li>
+      
+        <li>
+          <a href="/2018/11/30/2018.11/">Pantheon 2018.11 update</a>
+        </li>
+      
+        <li>
+          <a href="/2017/11/05/1-2-0/">Pantheon 1.2.0 released</a>
+        </li>
+      
+        <li>
+          <a href="/2017/05/16/1.1.1/">Pantheon 1.1.0 &amp; 1.1.1 released</a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+
+        </div>
+    </div>
+  </div>
+  <footer class="blog-footer">
+  <div class="container">
+    <div id="footer-info" class="inner">
+      &copy; 2023 Pantheon dream team<br>
+      <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(55700209, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/55700209" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </div>
+  </div>
+</footer>
+
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+</body>
+</html>
